@@ -1,2 +1,2 @@
 # gh-docker
-docker build gh-docker:latest .
+docker build --tag yog27ray/gh-docker:${VERSION} .
