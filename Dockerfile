@@ -23,4 +23,4 @@ RUN apt-get clean && \
     apt-get autoremove && \
     rm -rf /var/lib/apt/lists/* /tmp/* ~/*
 ADD entry.sh .
-CMD ["/root/entry.sh", "/bin/bash"]
+CMD ["/gh-docker/entry.sh", "/bin/bash"]
