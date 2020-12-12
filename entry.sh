@@ -1,3 +1,4 @@
+#!/bin/bash
 cd ~
 mkdir -p .config/gh
 cd .config/gh
