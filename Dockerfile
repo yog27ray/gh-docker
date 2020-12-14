@@ -22,7 +22,8 @@ RUN APT_INSTALL="apt-get install -y --no-install-recommends" && \
 RUN apt-get clean && \
     apt-get autoremove && \
     rm -rf /var/lib/apt/lists/* /tmp/* ~/*
-RUN echo "/gh-docker/entry.sh" >> "/root/.bashrc"
 
-ADD entry.sh .
-CMD ["/gh-docker/entry.sh", "/bin/bash"]
+COPY entry.sh /usr/local/bin/entry.sh
+RUN chmod +x /usr/local/bin/entry.sh
+
+CMD ["entry.sh"]
