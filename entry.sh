@@ -1,5 +1,5 @@
 #!/bin/bash
-cd ~
+cd /root
 mkdir -p .config/gh
 cd .config/gh
 if [[ "$PLUGIN_TOKEN" == "" || "$PLUGIN_USER" == "" ]]; then
