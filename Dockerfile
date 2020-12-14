@@ -25,6 +25,6 @@ RUN apt-get clean && \
 
 COPY entry.sh /usr/local/bin/entry.sh
 RUN chmod +x /usr/local/bin/entry.sh
+RUN echo "/usr/local/bin/entry.sh" >> /root/.bashrc
 
-ENTRYPOINT /usr/local/bin/entry.sh
-CMD ["/bin/bash", "/usr/local/bin/entry.sh"]
+CMD ["/bin/bash"]
