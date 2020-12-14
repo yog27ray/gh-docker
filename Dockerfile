@@ -23,8 +23,8 @@ RUN apt-get clean && \
     apt-get autoremove && \
     rm -rf /var/lib/apt/lists/* /tmp/* ~/*
 
-COPY entry.sh /usr/local/bin/entry.sh
-RUN chmod +x /usr/local/bin/entry.sh
-RUN echo "/usr/local/bin/entry.sh" >> /root/.bashrc
+COPY entry.sh $APPDIR
+RUN echo "$APPDIR/entry.sh" >> $HOME/.bashrc
 
-CMD ["/bin/bash"]
+ENTRYPOINT ["/gh-docker/entry.sh"]
+CMD ["/bin/sh"]
